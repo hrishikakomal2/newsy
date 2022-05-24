@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Newsy App</title>
+  </head>
+  <body style="background-color: honeydew ;">
+
+    <div style="border: solid 1px ; background-color :  lightskyblue; color: black; position: fixed; width: 100%;">
+        <center>
+            <h2>Today Newsy</h2>
+        </center>
+    </div>
+
+    <div class="container">
+        <br />
+        <br />
+
+        {% for i in case.articles  %}
+
+        <div class="container">
+            <br />
+            <h4><strong style="color: black;">Author : </strong>{{i.author}}</h4>
+            <h4><strong style="color: black;">Title : </strong>{{i.title}}</h4>
+            <h5><strong style="color: black;">Description : </strong>{{i.Description}}</h5>
+            <br />
+            <img src = {{ i.urlToImage }} width="50%" height="100%" alt="Newsy App"
+
+        </div>
+
+        {% endfor %}
+        <br />
+    </div>
+   
+    <div style="border: solid 1px ; background-color :  lightskyblue; color: black; position: fixed; width: 100%;">
+      <center>
+          <h4>Copyright &copy; 2022 Newsy App</h4>
+      </center>
+  </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>
